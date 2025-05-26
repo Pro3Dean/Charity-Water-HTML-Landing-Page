@@ -1,0 +1,99 @@
+/* charity: water Brand Colors & Fonts
+
+Primary Colors:
+- Yellow:     #FFC907
+- Blue:       #2E9DF7
+
+Secondary Colors:
+- Light Blue: #8BD1CB
+- Green:      #4FCB53
+- Orange:     #FF902A
+- Red:        #F5402C
+- Dark Green: #159A48
+- Pink:       #F16061
+
+Fonts:
+- Proxima Nova
+- Avenir
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Proxima Nova', sans-serif;
+  background-color: #FFF6E5;
+  color: #1e1e1e;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #FFF6E5;
+  font-family: 'Playfair Display', serif;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 30px;
+  height: auto;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #d1e8f9;
+  position: relative;
+}
+
+.hero-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.hero-text {
+  background-color: rgba(0, 55, 65, 0.85);
+  color: white;
+  padding: 30px;
+  max-width: 600px;
+  margin: -80px auto 20px;
+  border-radius: 12px;
+  font-family: 'Playfair Display', serif;
+}
+
+.hero-text h1 {
+  margin-top: 0;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #FFC700;
+  color: black;
+  font-weight: bold;
+  padding: 15px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1.1em;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #FFDD00;
+}
