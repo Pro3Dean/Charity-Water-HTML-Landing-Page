@@ -57,7 +57,7 @@ nav a {
 .hero {
   text-align: center;
   padding: 40px 20px;
-  background-color: #d1e8f9;
+  background-color: #d1e8f9; /*#8BD1CB*/
   position: relative;
 }
 
@@ -83,7 +83,7 @@ nav a {
 
 .cta-button {
   display: inline-block;
-  background-color: #FFC700;
+  background-color: #FFC700; /*FFC907*/
   color: black;
   font-weight: bold;
   padding: 15px 30px;
@@ -95,5 +95,5 @@ nav a {
 }
 
 .cta-button:hover {
-  background-color: #FFDD00;
+  background-color: #FFDD00; /*FFC907*/
 }
