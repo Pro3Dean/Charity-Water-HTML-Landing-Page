@@ -10,10 +10,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   padding: 20px 40px;
   background-color: #FFF6E5;
-  font-family: 'Playfair Display', serif;
-  flex-wrap: wrap;
+  text-align: center;
 }
 
 .logo {
@@ -23,8 +23,13 @@ body {
 }
 
 .logo img {
-  height: 30px;
+  height: 40px; /* Scales with nav height */
   width: auto;
+}
+
+.site-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
 }
 
 nav a {
@@ -32,87 +37,86 @@ nav a {
   color: #000;
   font-weight: bold;
   margin-left: 20px;
+  font-size: 1rem;
 }
 
-.hero-section {
+.center-message {
+  flex: 1 1 100%;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.hero-wrapper {
   display: flex;
-  align-items: stretch;
   justify-content: center;
-  background-color: #d1e8f9;
-  flex-wrap: nowrap;
+  align-items: center;
+  background-color: #FFF6E5;
 }
 
-.sidemarker {
-  width: 10%;
+.side-marker {
+  width: 5%;
   background-color: #d1e8f9;
   min-height: 600px;
 }
 
-.hero-image-wrapper {
+.hero-container {
   position: relative;
-  width: 80%;
+  width: 90%;
   max-width: 1000px;
-  min-height: 600px;
 }
 
-.hero-img {
+.hero-image {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   display: block;
 }
 
-.overlay-text {
+.text-overlay {
   position: absolute;
-  right: 5%;
-  top: 50%;
-  transform: translateY(-50%);
+  right: 4%;
+  bottom: 5%;
   background-color: rgba(0, 0, 0, 0.75);
   color: white;
-  padding: 30px;
+  padding: 25px;
+  width: 300px;
   border-radius: 20px;
-  max-width: 350px;
-  transition: all 0.5s ease;
   font-family: 'Playfair Display', serif;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-.overlay-text:hover {
-  transform: translateY(-50%) scale(1.03);
-}
-
-.overlay-content {
   text-align: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease;
 }
 
-.overlay-content h1 {
-  margin-top: 0;
-  font-size: 1.8em;
-  transition: color 0.3s ease;
+.text-overlay:hover {
+  transform: scale(1.03);
 }
 
-.overlay-content p {
+.text-overlay h1 {
+  font-size: 1.4em;
+  margin-bottom: 15px;
+}
+
+.text-overlay p {
   font-size: 0.95em;
-  line-height: 1.6;
-  margin-top: 15px;
-  transition: opacity 0.3s ease;
+  line-height: 1.5;
 }
 
 .cta-container {
   text-align: center;
-  background-color: #FFF6E5;
   padding: 40px 0;
+  background-color: #FFF6E5;
 }
 
 .cta-button {
   background-color: #FFC700;
-  color: #000;
+  color: black;
   font-weight: bold;
   padding: 15px 30px;
   border-radius: 30px;
   font-size: 1.1em;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .cta-button:hover {
@@ -120,29 +124,27 @@ nav a {
   transform: scale(1.05);
 }
 
-/* Mobile & Responsive Adjustments */
-@media (max-width: 900px) {
-  .hero-section {
+/* Responsive layout */
+@media (max-width: 850px) {
+  .hero-wrapper {
     flex-direction: column;
   }
 
-  .sidemarker {
+  .side-marker {
     display: none;
   }
 
-  .hero-image-wrapper {
+  .hero-container {
     width: 100%;
-    min-height: auto;
   }
 
-  .hero-img {
-    height: auto;
-  }
-
-  .overlay-text {
+  .text-overlay {
     position: static;
-    transform: none;
     margin: 20px auto;
-    max-width: 90%;
+    width: 90%;
+  }
+
+  .center-message {
+    font-size: 1rem;
   }
 }
