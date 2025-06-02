@@ -28,7 +28,7 @@ body {
 }
 
 .site-title {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Proxima Nova', sans-serif;
   font-size: 1.2rem;
 }
 
@@ -43,7 +43,7 @@ nav a {
 .center-message {
   flex: 1 1 100%;
   text-align: center;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Proxima Nova', sans-serif;
   font-size: 1.2rem;
   margin-top: 10px;
 }
