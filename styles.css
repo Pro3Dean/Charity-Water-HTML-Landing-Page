@@ -1,3 +1,10 @@
+/* RESPONSIVE SCALE-UP ON LARGE SCREENS */
+@media (min-width: 1400px) {
+  .hero-inner {
+    transform: scale(1.04);
+  }
+}
+
 /* RESET & BASE */
 * {
   margin: 0;
@@ -63,22 +70,24 @@ nav a {
 
 .hero-inner {
   display: flex;
-  max-width: 1000px;
+  flex-direction: row;
   width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
   transition: transform 0.3s ease;
-}
-
-.hero-image-container {
-  position: relative;
-  flex-grow: 1;
-  overflow: hidden;
 }
 
 .side-marker {
   width: 5%;
   background-color: #d1e8f9;
-  display: block;
+  min-height: 100%;
+}
+
+.hero-container {
+  position: relative;
+  flex-grow: 1;
+  width: 90%;
+  overflow: hidden;
 }
 
 .hero-image {
@@ -147,12 +156,6 @@ nav a {
     align-items: flex-start;
   }
 
-  @media (min-width: 1400px) {
-  .hero-inner {
-    transform: scale(1.04);
-  }
-}
-
   .center-message {
     position: static;
     transform: none;
@@ -161,6 +164,10 @@ nav a {
   }
 
   .hero-wrapper {
+    flex-direction: column;
+  }
+
+  .hero-inner {
     flex-direction: column;
   }
 
