@@ -68,6 +68,14 @@ nav a {
   width: 100%;
 }
 
+.hero-inner {
+  display: flex;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
 .hero-container {
   position: relative;
   flex-grow: 1;
