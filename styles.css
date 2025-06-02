@@ -62,20 +62,17 @@ nav a {
 /* HERO SECTION */
 .hero-wrapper {
   display: flex;
+  justify-content: center;
+  align-items: stretch;
   background-color: #FFF6E5;
-}
-
-.side-marker {
-  width: 5%;
-  background-color: #d1e8f9;
+  width: 100%;
 }
 
 .hero-container {
   position: relative;
-  width: 100%;
+  flex-grow: 1;
   max-width: 1000px;
   margin: 0 auto;
-  flex-grow: 1;
   overflow: hidden;
   transition: transform 0.3s ease;
 }
@@ -88,6 +85,12 @@ nav a {
   transition: transform 0.3s ease;
 }
 
+.side-marker {
+  width: 5%;
+  background-color: #d1e8f9;
+  min-height: 100%;
+  display: block;
+}
 
 /* OVERLAY TEXT */
 .text-overlay {
