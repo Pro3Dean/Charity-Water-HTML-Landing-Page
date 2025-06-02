@@ -64,8 +64,24 @@ nav a {
   display: flex;
   justify-content: center;
   align-items: stretch;
+  justify-content: center; /* Center the content horizontally */
+  align-items: stretch;
   background-color: #FFF6E5;
   width: 100%;
+  flex-wrap: nowrap;
+  flex: 1;
+}
+
+.hero-inner {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; /* center the row */
+}
+
+.side-marker {
+  width: 5%;
+  background-color: #d1e8f9;
 }
 
 .hero-container {
