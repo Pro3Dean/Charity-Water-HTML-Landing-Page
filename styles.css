@@ -55,33 +55,41 @@ nav a {
 }
 
 .hero {
-  text-align: center;
-  padding: 40px 20px;
-  background-color: #d1e8f9; /*#8BD1CB*/
   position: relative;
+  height: 100vh;
+  background-color: #d1e8f9; /*#8BD1CB*/
+  background-image: url('placeholder.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  text-align: center;
 }
 
-.hero-image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.hero-text {
+.hero-overlay {
   background-color: rgba(0, 55, 65, 0.85);
-  color: white;
   padding: 30px;
-  max-width: 600px;
-  margin: -80px auto 20px;
   border-radius: 12px;
-  font-family: 'Playfair Display', serif;
+  max-width: 600px;
+  color: white;
+  font-family: 'Playfair Dispaly', serif;
 }
 
-.hero-text h1 {
+.hero-overlay h1 {
   margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.hero-overlay p {
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 .cta-button {
+  margin-top: 30px;
   display: inline-block;
   background-color: #FFC700; /*FFC907*/
   color: black;
@@ -90,7 +98,6 @@ nav a {
   border-radius: 30px;
   text-decoration: none;
   font-size: 1.1em;
-  margin-top: 10px;
   transition: background-color 0.3s ease;
 }
 
