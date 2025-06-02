@@ -61,12 +61,21 @@ nav a {
 /* HERO SECTION */
 .hero-wrapper {
   display: flex;
-  justify-content: center; /* Center the content horizontally */
+  justify-content: center;
   align-items: stretch;
   background-color: #FFF6E5;
-  flex-wrap: nowrap;
-  flex: 1;
+  width: 100%;
 }
+
+.hero-container {
+  position: relative;
+  flex-grow: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
 
 .hero-inner {
   display: flex;
@@ -78,16 +87,8 @@ nav a {
 .side-marker {
   width: 5%;
   background-color: #d1e8f9;
-}
-
-.hero-container {
-  position: relative;
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  flex-grow: 1;
-  overflow: hidden;
-  transition: transform 0.3s ease;
+  min-height: 100%;
+  display: block;
 }
 
 .hero-image {
