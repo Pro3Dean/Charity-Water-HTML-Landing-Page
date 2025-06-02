@@ -1,22 +1,25 @@
-/* Ensure full-page background */
-html, body {
+/* RESET & BASE */
+* {
   margin: 0;
   padding: 0;
-  background-color: #FFF6E5;
+  box-sizing: border-box;
+}
+
+html, body {
   font-family: 'Proxima Nova', sans-serif;
+  background-color: #FFF6E5;
   min-height: 100vh;
 }
 
-/* HEADER */
-
+/* NAVBAR */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
   background-color: #FFF6E5;
-  flex-wrap: wrap;
   position: relative;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -40,6 +43,7 @@ html, body {
   transform: translateX(-50%);
   font-family: 'Playfair Display', serif;
   font-size: 1.1rem;
+  white-space: nowrap;
 }
 
 nav {
@@ -55,20 +59,14 @@ nav a {
 }
 
 /* HERO SECTION */
-
 .hero-wrapper {
   display: flex;
-  justify-content: center;
-  align-items: stretch;
   background-color: #FFF6E5;
-  flex-wrap: nowrap;
-  flex: 1;
 }
 
 .side-marker {
   width: 5%;
   background-color: #d1e8f9;
-  display: block;
 }
 
 .hero-container {
@@ -76,47 +74,47 @@ nav a {
   width: 90%;
   max-width: 1200px;
   flex-grow: 1;
+  overflow: hidden;
 }
 
 .hero-image {
   width: 100%;
   height: auto;
   display: block;
+  object-fit: cover;
 }
 
-/* OVERLAY */
-
+/* OVERLAY TEXT */
 .text-overlay {
   position: absolute;
-  right: 4%;
-  bottom: 5%;
+  right: 5%;
+  bottom: 6%;
   background-color: rgba(0, 0, 0, 0.75);
   color: white;
-  padding: 30px;
-  width: 330px;
+  padding: 35px;
+  width: 340px;
   border-radius: 20px;
   font-family: 'Playfair Display', serif;
   text-align: center;
   box-shadow: 0 10px 20px rgba(0,0,0,0.25);
-  transition: transform 0.3s ease;
-  min-height: 280px; /* Taller box */
+  min-height: 300px;
 }
 
 .text-overlay h1 {
-  font-size: 1.6em;
+  font-size: 1.8em;
   margin-bottom: 15px;
+  line-height: 1.4;
 }
 
 .text-overlay p {
   font-size: 1.05em;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
-/* CTA BUTTON */
-
+/* CTA SECTION */
 .cta-container {
   text-align: center;
-  padding: 40px 0;
+  padding: 60px 20px;
   background-color: #FFF6E5;
 }
 
@@ -124,9 +122,9 @@ nav a {
   background-color: #FFC700;
   color: black;
   font-weight: bold;
-  padding: 15px 30px;
+  padding: 18px 36px;
   border-radius: 30px;
-  font-size: 1.1em;
+  font-size: 1.15em;
   text-decoration: none;
   transition: all 0.3s ease;
   display: inline-block;
@@ -138,7 +136,6 @@ nav a {
 }
 
 /* RESPONSIVE */
-
 @media (max-width: 850px) {
   .navbar {
     flex-direction: column;
@@ -148,8 +145,8 @@ nav a {
   .center-message {
     position: static;
     transform: none;
-    text-align: left;
     margin-top: 10px;
+    text-align: left;
   }
 
   .hero-wrapper {
@@ -168,7 +165,6 @@ nav a {
     position: static;
     margin: 20px auto;
     width: 90%;
-    min-height: auto;
   }
 
   .cta-container {
