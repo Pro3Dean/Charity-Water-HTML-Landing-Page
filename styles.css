@@ -62,8 +62,13 @@ nav a {
 /* HERO SECTION */
 .hero-wrapper {
   display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: stretch;
   background-color: #FFF6E5;
+  flex-wrap: nowrap;
+  flex: 1;
 }
+
 
 .side-marker {
   width: 5%;
