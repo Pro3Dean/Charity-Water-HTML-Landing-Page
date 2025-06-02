@@ -68,6 +68,7 @@ nav a {
 
 .hero-inner {
   display: flex;
+  flex-direction: row;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -77,16 +78,12 @@ nav a {
 .side-marker {
   width: 5%;
   background-color: #d1e8f9;
+  display: block;
 }
 
-.hero-container {
-  flex: 1;
-  display: flex;
-}
-
-.hero-image-wrapper {
+.image-container {
   position: relative;
-  width: 100%;
+  flex: 1;
   display: flex;
   align-items: stretch;
 }
@@ -95,9 +92,22 @@ nav a {
   width: 100%;
   height: auto;
   display: block;
-  object-fit: cover;
 }
 
+.text-overlay {
+  position: absolute;
+  right: 5%;
+  bottom: 6%;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 35px;
+  width: 340px;
+  border-radius: 20px;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+  min-height: 300px;
+}
 
 /* OVERLAY TEXT */
 .text-overlay {
