@@ -69,8 +69,8 @@ nav a {
   background-color: rgba(0, 0, 0, 0.75);
   color: white;
   padding: 30px;
-  border-radius: 20px;
-  max-width: 350px;
+  border-radius: 50px;
+  max-width: 300px;
   transition: all 0.5s ease;
   font-family: 'Playfair Display', serif;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
