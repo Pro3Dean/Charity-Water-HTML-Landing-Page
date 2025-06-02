@@ -23,13 +23,13 @@ body {
 }
 
 .logo img {
-  height: 40px; /* Scales with nav height */
+  height: auto; /* Scales with nav height */
   width: auto;
 }
 
 .site-title {
   font-family: 'Proxima Nova', sans-serif;
-  font-size: 1.2rem;
+  font-size: 2.4rem;
 }
 
 nav a {
@@ -37,14 +37,14 @@ nav a {
   color: #000;
   font-weight: bold;
   margin-left: 20px;
-  font-size: 1rem;
+  font-size: 2.4rem;
 }
 
 .center-message {
   flex: 1 1 100%;
   text-align: center;
   font-family: 'Proxima Nova', sans-serif;
-  font-size: 1.2rem;
+  font-size: 2.4rem;
   margin-top: 10px;
 }
 
@@ -94,12 +94,12 @@ nav a {
 }
 
 .text-overlay h1 {
-  font-size: 1.4em;
+  font-size: 2.51em;
   margin-bottom: 15px;
 }
 
 .text-overlay p {
-  font-size: 0.95em;
+  font-size: 1.87em;
   line-height: 1.5;
 }
 
