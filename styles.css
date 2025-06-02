@@ -13,6 +13,7 @@ body {
   padding: 20px 40px;
   background-color: #FFF6E5;
   font-family: 'Playfair Display', serif;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -37,7 +38,7 @@ nav a {
   align-items: stretch;
   justify-content: center;
   background-color: #d1e8f9;
-  min-height: 600px;
+  flex-wrap: nowrap;
 }
 
 .sidemarker {
@@ -62,33 +63,38 @@ nav a {
 
 .overlay-text {
   position: absolute;
-  right: 0;
-  top: 0;
-  width: 40%;
-  height: 100%;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.75);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Playfair Display', serif;
   color: white;
-  border-radius: 0 0 0 0;
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 350px;
+  transition: all 0.5s ease;
+  font-family: 'Playfair Display', serif;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.overlay-text:hover {
+  transform: translateY(-50%) scale(1.03);
 }
 
 .overlay-content {
   text-align: center;
-  padding: 30px;
-  max-width: 90%;
 }
 
 .overlay-content h1 {
   margin-top: 0;
   font-size: 1.8em;
+  transition: color 0.3s ease;
 }
 
 .overlay-content p {
   font-size: 0.95em;
   line-height: 1.6;
+  margin-top: 15px;
+  transition: opacity 0.3s ease;
 }
 
 .cta-container {
@@ -105,9 +111,37 @@ nav a {
   border-radius: 30px;
   font-size: 1.1em;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .cta-button:hover {
   background-color: #FFDD00;
+  transform: scale(1.05);
+}
+
+/* Mobile & Responsive Adjustments */
+@media (max-width: 900px) {
+  .hero-section {
+    flex-direction: column;
+  }
+
+  .sidemarker {
+    display: none;
+  }
+
+  .hero-image-wrapper {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .hero-img {
+    height: auto;
+  }
+
+  .overlay-text {
+    position: static;
+    transform: none;
+    margin: 20px auto;
+    max-width: 90%;
+  }
 }
