@@ -1,19 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
-
-body {
-  margin: 0;
-  background-color: #FFF6E5;
-  font-family: 'Proxima Nova', sans-serif;
-}
-
+/* Header Flex Layout */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
   padding: 20px 40px;
   background-color: #FFF6E5;
-  text-align: center;
+  font-family: 'Playfair Display', serif;
+  flex-wrap: nowrap;
 }
 
 .logo {
@@ -23,48 +16,53 @@ body {
 }
 
 .logo img {
-  height: auto; /* Scales with nav height */
+  height: 40px;
   width: auto;
 }
 
 .site-title {
-  font-family: 'Proxima Nova', sans-serif;
-  font-size: 2.4rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+}
+
+.center-message {
+  font-size: 1.1rem;
+  margin-left: 40px;
+  flex-grow: 1;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
 }
 
 nav a {
   text-decoration: none;
   color: #000;
   font-weight: bold;
-  margin-left: 20px;
-  font-size: 2.4rem;
+  font-size: 1rem;
 }
 
-.center-message {
-  flex: 1 1 100%;
-  text-align: center;
-  font-family: 'Proxima Nova', sans-serif;
-  font-size: 2.4rem;
-  margin-top: 10px;
-}
 
+/* HERO SECTION */
 .hero-wrapper {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch; /* Makes children take full height */
   background-color: #FFF6E5;
 }
 
 .side-marker {
   width: 5%;
   background-color: #d1e8f9;
-  min-height: 600px;
 }
 
 .hero-container {
   position: relative;
   width: 90%;
-  max-width: 1000px;
+  max-width: 1200px;
+  flex-grow: 1;
 }
 
 .hero-image {
@@ -73,9 +71,10 @@ nav a {
   display: block;
 }
 
+
+/* Overlay remains perfect, but we adjust font size */
 .text-overlay {
   position: absolute;
-  top: 5%;
   right: 4%;
   bottom: 5%;
   background-color: rgba(0, 0, 0, 0.75);
@@ -89,44 +88,24 @@ nav a {
   transition: transform 0.3s ease;
 }
 
-.text-overlay:hover {
-  transform: scale(1.03);
-}
-
-.text-overlay h1 {
-  font-size: 2.51em;
-  margin-bottom: 15px;
-}
-
 .text-overlay p {
-  font-size: 1.87em;
-  line-height: 1.5;
+  font-size: 1.05em; /* Increased from 0.95em */
+  line-height: 1.6;
 }
 
-.cta-container {
-  text-align: center;
-  padding: 40px 0;
-  background-color: #FFF6E5;
-}
 
-.cta-button {
-  background-color: #FFC700;
-  color: black;
-  font-weight: bold;
-  padding: 15px 30px;
-  border-radius: 30px;
-  font-size: 1.1em;
-  text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: #FFDD00;
-  transform: scale(1.05);
-}
-
-/* Responsive layout */
+/* RESPONSIVE */
 @media (max-width: 850px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .center-message {
+    margin: 10px 0;
+    text-align: left;
+  }
+
   .hero-wrapper {
     flex-direction: column;
   }
@@ -135,17 +114,13 @@ nav a {
     display: none;
   }
 
-  .hero-container {
-    width: 100%;
-  }
-
   .text-overlay {
     position: static;
     margin: 20px auto;
     width: 90%;
   }
 
-  .center-message {
-    font-size: 1rem;
+  .hero-container {
+    width: 100%;
   }
 }
