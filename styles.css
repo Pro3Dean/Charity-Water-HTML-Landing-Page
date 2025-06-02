@@ -23,7 +23,7 @@ body {
 }
 
 .logo img {
-  height: 50px;
+  height: 100px;
   width: auto;
 }
 
@@ -64,8 +64,8 @@ nav a {
 
 .overlay-text {
   position: absolute;
-  right: 3.75%;
-  top: 15%;
+  right: 5%;
+  top: 20%;
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.75);
   color: white;
