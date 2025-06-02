@@ -34,51 +34,59 @@ nav a {
 
 .hero-section {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
   background-color: #d1e8f9;
-  padding: 0;
+  min-height: 600px;
 }
 
 .sidemarker {
   width: 10%;
   background-color: #d1e8f9;
-  height: 100%;
-  min-height: 500px;
+  min-height: 600px;
 }
 
 .hero-image-wrapper {
   position: relative;
   width: 80%;
   max-width: 1000px;
+  min-height: 600px;
 }
 
 .hero-img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
-  border-radius: 0;
 }
 
 .overlay-text {
   position: absolute;
   right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 0;
   width: 40%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.75);
-  color: #fff;
-  padding: 30px;
-  border-radius: 15px 0 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: 'Playfair Display', serif;
+  color: white;
+  border-radius: 0 0 0 0;
 }
 
-.overlay-text h1 {
+.overlay-content {
+  text-align: center;
+  padding: 30px;
+  max-width: 90%;
+}
+
+.overlay-content h1 {
   margin-top: 0;
   font-size: 1.8em;
 }
 
-.overlay-text p {
+.overlay-content p {
   font-size: 0.95em;
   line-height: 1.6;
 }
