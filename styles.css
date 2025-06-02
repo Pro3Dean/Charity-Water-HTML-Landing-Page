@@ -1,5 +1,6 @@
+/* RESPONSIVE SCALE-UP ON LARGE SCREENS */
 @media (min-width: 1400px) {
-  .hero-container {
+  .hero-inner {
     transform: scale(1.04);
   }
 }
@@ -63,25 +64,16 @@ nav a {
 .hero-wrapper {
   display: flex;
   justify-content: center;
-  align-items: stretch;
   background-color: #FFF6E5;
   width: 100%;
 }
 
 .hero-inner {
   display: flex;
-  max-width: 1000px;
+  flex-direction: row;
   width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
-  align-items: stretch;
-}
-
-.hero-container {
-  position: relative;
-  flex-grow: 1;
-  max-width: 1000px;
-  margin: 0 auto;
-  overflow: hidden;
   transition: transform 0.3s ease;
 }
 
@@ -89,7 +81,13 @@ nav a {
   width: 5%;
   background-color: #d1e8f9;
   min-height: 100%;
-  display: block;
+}
+
+.hero-container {
+  position: relative;
+  flex-grow: 1;
+  width: 90%;
+  overflow: hidden;
 }
 
 .hero-image {
@@ -98,13 +96,6 @@ nav a {
   display: block;
   object-fit: cover;
   transition: transform 0.3s ease;
-}
-
-.side-marker {
-  width: 5%;
-  background-color: #d1e8f9;
-  min-height: 100%;
-  display: block;
 }
 
 /* OVERLAY TEXT */
@@ -173,6 +164,10 @@ nav a {
   }
 
   .hero-wrapper {
+    flex-direction: column;
+  }
+
+  .hero-inner {
     flex-direction: column;
   }
 
